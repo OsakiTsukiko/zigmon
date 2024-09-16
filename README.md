@@ -17,8 +17,6 @@ pub fn build(b: *std.Build) void {
 ## Example Code
 ```zig
 const std = @import("std");
-const testing = std.testing;
-
 const zm = @import("zigmon").ZigMon;
 
 fn watch_callback(
