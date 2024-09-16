@@ -22,9 +22,9 @@ const zm = @import("zigmon").ZigMon;
 fn watch_callback(
     _: zm.WatchID, // watch_id
     _: zm.Actions, // action
-    _: *const u8, // root_dir
-    _: *const u8, // filepath
-    _: *const u8, // old_filepath
+    _: [*:0]const u8, // root_dir
+    _: [*:0]const u8, // filepath
+    _: [*:0]const u8, // old_filepath
     _: ?*anyopaque, // user
 ) void {
     std.debug.print("NEW EVENT\n", .{});
