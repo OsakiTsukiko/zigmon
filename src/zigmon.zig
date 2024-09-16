@@ -34,9 +34,9 @@ pub const ZigMon = extern struct {
     pub const callback = fn (
         watch_id: WatchID, 
         action: Actions,
-        root_dir: [*:0]const u8,
-        filepath: [*:0]const u8,
-        old_filepath: [*:0]const u8,
+        root_dir: ?[*:0]const u8,
+        filepath: ?[*:0]const u8,
+        old_filepath: ?[*:0]const u8,
         user: ?*anyopaque,
     ) void;
 };
