@@ -4,7 +4,7 @@
 > Hopefully this can be accepted into upstream.
 
 ## Getting started
-```zig
+```
 zig fetch --save git+https://github.com/darltrash/zigmon
 ```
 
