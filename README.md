@@ -40,5 +40,14 @@ pub fn main() !void {
 }
 ```
 
+## Demos
+```shell
+# Will run src/demos/main.zig (wrapper)
+zig build demo
+
+# Will run src/demos/raw.zig (native)
+zig build demo-raw
+```
+
 ## Useful
 To better understand how to use, look into `src/demos/main.zig` and `src/demos/raw.zig` (for the raw version of this binding).
