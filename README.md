@@ -1,11 +1,8 @@
 # Zig bindings for the C library [dmon](https://github.com/septag/dmon).
 
-> **Note:** This is a hard-fork of [Zigmon by OsakiTsukiko, on Github](https://github.com/OsakiTsukiko/zigmon) designed specifically for the needs of [Makko](https://forge.starlightnet.work/Team/Makko)
-> Hopefully this can be accepted into upstream.
-
 ## Getting started
 ```
-zig fetch --save git+https://github.com/darltrash/zigmon
+zig fetch --save git+https://github.com/OsakiTsukiko/zigmon
 ```
 
 Then in your `build.zig` add:
@@ -36,7 +33,7 @@ pub fn main() !void {
         .on_change = on_change,
     };
     try my_watcher.watch();
-    deinit my_watcher.unwatch();
+    defer my_watcher.unwatch();
 }
 ```
 
@@ -51,3 +48,5 @@ zig build demo-raw
 
 ## Useful
 To better understand how to use, look into `src/demos/main.zig` and `src/demos/raw.zig` (for the raw version of this binding).
+
+> **Note:** Used by [Makko](https://forge.starlightnet.work/Team/Makko)
