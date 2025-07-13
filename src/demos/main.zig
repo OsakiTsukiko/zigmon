@@ -4,7 +4,7 @@ const zm = @import("zigmon");
 const Watcher = zm.Watcher(i64);
 
 fn on_change(_: Watcher, _: zm.Action, _: []const u8, _: ?[]const u8) void {
-    std.debug.print("\nSomething happened:\n");
+    std.debug.print("\nSomething happened:\n", .{});
 }
 
 fn on_create(watcher: Watcher, file: []const u8) void {
